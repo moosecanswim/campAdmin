@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <th:block th:replace="base::header"></th:block>
+</head>
+<body>
+<th:block th:replace="base::navigation"></th:block>
+<div id="wrapper">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--Enter page content here -->
+                    <div class="container">
+
+                        <a href="/formTroopECheckin">Troop Checkin Form</a>
+                        <a href="/see checked in troops">Add Director</a>
+                        <a href="">Food Service Print Out</a>
+                        <a href="">Facilities Print Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block th:replace="base::footer"></th:block>
+</body>
+</html>

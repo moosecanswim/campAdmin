@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>E-Checkin Troop Entry</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--Enter page content here -->
+                    <div class="container">
+                        <form class="well form-horizontal"
+                              action="#"
+                              th:action="@{/addDirector}"
+                              method="post"
+                              th:object="${troop}">
+                            <legend>New Director Form</legend>
+                            <fieldset>
+                                <input type="hidden" th:field="*{id}"/>
+                                <!--contact name-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Name: </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <input type="text" th:field="*{contactName}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--contact number-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Phone Number: </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <input type="text" th:field="*{contactNumber}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--contact email-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Email: </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <input type="text" th:field="*{contactEmail}"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--week of stay-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">What week is your troop coming: </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <select th:field="*{week}">
+                                                <option value="">Select Week</option>
+                                                <option>Week 1</option>                                               </option>
+                                                <option>Week 2</option>
+                                                <option>Week 3</option>
+                                                <option>Week 4</option>
+                                                <option>Week 5</option>
+                                                <option>Week 6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                               <!--unit type-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Unit Type </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <select th:field="*{unitType}">
+                                                <option value="">Type</option>
+                                                <option>Troop</option>                                               </option>
+                                                <option>Crew</option>
+                                                <option>Pack</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--unit number-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Unit Number: </label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <input type="text" th:field="*{unitNumber}"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <button type="submit" value="Submit">Submit</button>
+                                    <button type="reset" calue="Clear Form">Clear</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
